@@ -41,24 +41,7 @@ export const sidebarItems = (role: TRoles): SidbarItem[] => {
               icon: Eye
             },
           ],
-        });
-        roleMenus.push({
-          title: "Manage Rents",
-          path: `/manage-rent`,
-          icon: LandPlot,
-          children: [
-            {
-              title: "View Rents",
-              path: `/manage-rents/view`,
-              icon: Eye
-            },
-            {
-              title: "Add Rent",
-              path: `/manage-rents/add`,
-              icon: Eye
-            },
-          ],
-        });
+        });        
         roleMenus.push({
           title: "Manage Sales",
           path: `/manage-sales`,
@@ -98,7 +81,7 @@ export const sidebarItems = (role: TRoles): SidbarItem[] => {
         icon: CiUser,
       });
       break;
-    case userRoles.BUYER:
+    case userRoles.USER:
       roleMenus.push({
         title: "Dashboard",
         path: `/${role}`,
