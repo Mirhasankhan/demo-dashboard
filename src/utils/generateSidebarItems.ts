@@ -43,6 +43,23 @@ export const sidebarItems = (role: TRoles): SidbarItem[] => {
           ],
         });
         roleMenus.push({
+          title: "Manage Rents",
+          path: `/manage-rent`,
+          icon: LandPlot,
+          children: [
+            {
+              title: "View Rents",
+              path: `/manage-rents/view`,
+              icon: Eye
+            },
+            {
+              title: "Add Rent",
+              path: `/manage-rents/add`,
+              icon: Eye
+            },
+          ],
+        });
+        roleMenus.push({
           title: "Manage Sales",
           path: `/manage-sales`,
           icon: BadgeDollarSign,

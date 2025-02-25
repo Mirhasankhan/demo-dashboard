@@ -20,12 +20,14 @@ const DashboardHeader = () => {
           id="email"
           placeholder="Search here...."
         />
-        <Search
+      </div>
+      <div className="flex items-center gap-2">
+       <div className="text-2xl">
+       <Search
           onClick={() => setSearchOpen(!searchOpen)}
           className="md:hidden"
         />
-      </div>
-      <div className="flex items-center gap-2">
+       </div>
         <div className="bg-yellow-100 p-1 rounded-sm text-yellow-500 cursor-pointer">
           <Bell onClick={() => setNotificationsOpen(!notificationsOpen)} />
         </div>
@@ -48,13 +50,13 @@ const DashboardHeader = () => {
           {!isOpen && <ChevronDown />}
         </div>
       </div>
-      <div className="absolute top-16 right-0">
+      <div className="absolute top-20 right-4">
         <UserDetails isOpen={isOpen}></UserDetails>
       </div>
-      <div className="absolute top-20 right-0 md:hidden">
+      <div className="absolute top-20 right-4 md:hidden">
         {!isOpen && <DashboardSearch searchOpen={searchOpen}></DashboardSearch>}
       </div>
-      <div className="absolute top-16 right-0">
+      <div className="absolute top-20 right-4">
         {!isOpen && !searchOpen && (
           <DashboardNotifications notificationsOpen={notificationsOpen} />
         )}
