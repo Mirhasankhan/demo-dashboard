@@ -6,6 +6,9 @@ import { GoPackage } from "react-icons/go";
 import { CiCirclePlus } from "react-icons/ci";
 import { LuTableProperties } from "react-icons/lu";
 import { FcSalesPerformance } from "react-icons/fc";
+import { UserRound,BadgeDollarSign,LandPlot,Eye } from 'lucide-react';
+
+
 
 export const sidebarItems = (role: TRoles): SidbarItem[] => {
   const roleMenus: SidbarItem[] = [];
@@ -19,13 +22,35 @@ export const sidebarItems = (role: TRoles): SidbarItem[] => {
       })
         roleMenus.push({
           title: "Manage Rents",
-          path: `/${role}/manage-rents`,
-          icon: MdDashboard,
+          path: `/manage-rents`,
+          icon: LandPlot,
         })
         roleMenus.push({
-          title: "Manage Sells",
-          path: `/${role}/manage-sells`,
-          icon: MdDashboard,
+          title: "Manage Rents",
+          path: `/manage-rents`,
+          icon: LandPlot,
+          children: [
+            {
+              title: "View Rents",
+              path: `/manage-rents/view`,
+              icon: Eye
+            },
+            {
+              title: "Add Rent",
+              path: `/manage-rents/add`,
+              icon: Eye
+            },
+          ],
+        });
+        roleMenus.push({
+          title: "Manage Sales",
+          path: `/manage-sales`,
+          icon: BadgeDollarSign,
+        });
+        roleMenus.push({
+          title: "Profile",
+          path: `/manage-profile`,
+          icon: UserRound,
         });
       break;
 

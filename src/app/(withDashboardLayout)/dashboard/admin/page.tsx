@@ -1,5 +1,7 @@
 "use client"
 import { motion } from 'framer-motion';
+
+
 import { useState } from 'react';
 
 const AdminPage = () => {
@@ -7,6 +9,7 @@ const AdminPage = () => {
   const [moveRight, setMoveRight] = useState(false);
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+   
       <motion.h1 
         initial={{ opacity: 0, y: -50 }} 
         animate={{ opacity: 1, y: 0, x: moveRight ? 50 : 0 }} 

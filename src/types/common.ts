@@ -9,4 +9,5 @@ export interface SidbarItem {
     parentPath?: string;
     child?: SidbarItem[];
     icon?: IconType;
+    children?:SidbarItem[];
   }

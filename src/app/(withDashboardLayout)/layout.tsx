@@ -1,7 +1,7 @@
 "use client";
 
 import Sidebar from "@/components/dashboard/Sidebar";
-import DashboardHeader from "@/components/shared/DashboardHeader";
+import DashboardHeader from "@/components/dashboard/DashboardHeader";
 import { PanelRight, Webcam } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -33,7 +33,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
           } md:col-span-4 bg-gray-100 overflow-auto h-full`}
         >
           {/* header */}
-          <div className="flex gap-3 h-12 border-b items-center px-3">
+          <div className="flex gap-3 h-16 border-b items-center px-3">
             <button className="md:hidden">
               <PanelRight onClick={() => setIsOpen(!isOpen)}></PanelRight>
             </button>
