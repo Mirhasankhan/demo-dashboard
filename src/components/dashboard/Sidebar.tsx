@@ -16,7 +16,7 @@ const Sidebar = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (value: bo
   };
 
   const handleLinkClick = () => {
-    setIsOpen(false); // Close sidebar when a link is clicked
+    setIsOpen(false); 
   };
 
   return (
@@ -42,7 +42,7 @@ const Sidebar = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (value: bo
           ) : (
             <Link href={`/dashboard${item.path}`} passHref>
               <div
-                onClick={handleLinkClick} // Close sidebar when clicked
+                onClick={handleLinkClick} 
                 className={`cursor-pointer ${
                   pathName === `/dashboard${item.path}` ? "bg-[#06a788] font-medium text-white" : ""
                 } hover:bg-[#06a788] font-medium hover:text-white my-4 ${

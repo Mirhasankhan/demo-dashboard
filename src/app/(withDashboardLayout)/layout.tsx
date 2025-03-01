@@ -28,7 +28,6 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
               <X onClick={() => setIsOpen(!isOpen)}></X>
             </button>
           </div>
-
           <Sidebar setIsOpen={setIsOpen} isOpen={isOpen} />
         </div>
         <div
